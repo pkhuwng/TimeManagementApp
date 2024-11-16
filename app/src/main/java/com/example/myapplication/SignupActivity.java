@@ -72,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
         String selection = DatabaseHelper.COL_USERNAME + " = ?";
         String[] selectionArgs = { username };
 
-        try (Cursor cursor = db.query(DatabaseHelper.TABLE_NAME, null, selection, selectionArgs, null, null, null)) {
+        try (Cursor cursor = db.query(DatabaseHelper.TABLE_USERS, null, selection, selectionArgs, null, null, null)) {
             if (cursor != null && cursor.getCount() > 0) {
                 return false; // Tên đăng nhập đã tồn tại
             }
@@ -85,7 +85,7 @@ public class SignupActivity extends AppCompatActivity {
         values.put(DatabaseHelper.COL_DISPLAY_NAME, name);
         values.put(DatabaseHelper.COL_TYPE, "user");
 
-        long newRowId = db.insert(DatabaseHelper.TABLE_NAME, null, values);
+        long newRowId = db.insert(DatabaseHelper.TABLE_USERS, null, values);
         return newRowId != -1; // Trả về true nếu lưu thành công
     }
 }

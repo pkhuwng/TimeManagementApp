@@ -1,17 +1,25 @@
 package com.example.myapplication;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
-
+    Button button_show_more_task;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home); // Đảm bảo layout này tồn tại
-
+        button_show_more_task = findViewById(R.id.button_show_more_tasks);
+        button_show_more_task.setOnClickListener(v->{
+            Intent intent = new Intent(HomeActivity.this, ScheduleActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

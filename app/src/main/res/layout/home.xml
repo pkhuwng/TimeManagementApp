@@ -13,7 +13,7 @@
 
         <TextView
             android:id="@+id/schedule_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:paddingLeft="16dp"
@@ -47,7 +47,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="280dp"
         android:layout_marginHorizontal="30dp"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
@@ -64,83 +64,23 @@
             android:textColor="@color/back_button"
             android:layout_marginBottom="8dp"
             android:text='Thời gian biểu'/>
-
-        <!-- Các mục công việc -->
-        <LinearLayout
+        <ListView
+            android:id="@+id/task_list_view"
             android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:paddingBottom="16dp" />
+        <Button
+            android:id="@+id/button_show_more_tasks"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/item_background"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/job_title_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tên công việc 1"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/job_description_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mô tả công việc 1"
-                android:textColor="#757575"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/item_background"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/job_title_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tên công việc 2"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/job_description_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mô tả công việc 2"
-                android:textColor="#757575"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/item_background"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/job_title_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tên công việc 3"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/job_description_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mô tả công việc 3"
-                android:textColor="#757575"
-                android:textSize="14sp" />
-        </LinearLayout>
+            android:layout_gravity="center"
+            android:text="Show More Tasks"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#664FA3" />
     </LinearLayout>
+
 
     <!-- Ô Thống Kê -->
     <LinearLayout
